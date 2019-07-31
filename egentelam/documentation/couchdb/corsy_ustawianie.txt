@@ -1,0 +1,4 @@
+w linii komend jako admin na Windzie w folderze app 
+C:\Users\dp\Desktop\PracowaniaProgramowania\frontend\app>add-cors-to-couchdb http://127.0.0.1:5984 -u root -p password  
+#powinno wyświetlic:
+success    

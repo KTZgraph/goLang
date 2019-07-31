@@ -1,0 +1,14 @@
+---------------------MYSQL----------------------
+Tabela użytkowników, gdzie login jest unikalny
+CREATEA DATABASE golang_users;
+USE golang_users;
+
+CREATE TABLE users(
+userID int AUTO_INCREMENT PRIMARY KEY,
+login Varchar(30),
+password Varchar(250),
+userDescription Varchar(250),
+points INT DEFAULT 0,
+isLogged bool DEFAULT FALSE,
+UNIQUE (login)
+)

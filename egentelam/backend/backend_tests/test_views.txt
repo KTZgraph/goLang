@@ -1,0 +1,117 @@
+########################## Testowanie manualne postmanem ########################
+127.0.0.1:3000/api/addNewUserView
+
+{
+	"login": "B",
+	"password": "B"
+}
+#"[addNewUserView] Dodano uzytkownika do bazy"
+
+{
+	"login": "C5",
+	"password": "C",
+	"test": "test",
+	"userDescription" : "jakis opis"
+}
+#"[addNewUserView] Dodano uzytkownika do bazy"
+
+{
+	"login": "B2",
+	"password": "B",
+	"test": "test"
+}
+"[addNewUserView] Dodano uzytkownika do bazy"
+
+{
+	"password": "A",
+	"points": 11111
+}
+#"[addNewUserView][Error] Nie podano loginu"
+
+
+{
+	"login": "A",
+	"password": "A"
+}
+
+#"Login zajęty"
+
+{
+	"login": "A"
+}
+#"[addNewUserView][Error] Nie podano hasła"
+
+################################################################
+127.0.0.1:3000/api/updateUserPointsView
+{
+	"login": "B2"
+
+}
+#"[updateUserPointsView] Dodano punkt"
+
+{
+	"logine": "B2"
+
+}
+#"[updateUserPointsView][Error] Nie podano loginu"
+
+{
+	"login": "B2333333333333"
+
+}
+#"[updateUserPointsView][Error] Brak uzytkownika w bazie"
+
+
+################################################################
+127.0.0.1:3000/api/loginUserView
+
+{
+	"login": "B2",
+	"password": "B",
+	"test": "test"
+}
+#true
+
+
+{
+	"login": "B2",
+	"password": "B2",
+	"test": "test"
+}
+#false
+
+
+################################################################
+127.0.0.1:3000/api/addNewCardView
+{	
+	"id" : 1,        
+	"text": "ALA MA KOTA"       
+	
+}
+#"[addNewCardView] Dodano nową kartę"
+
+{	
+	"id" : 1,        
+	"IsQuestion" : true ,
+	"text": "ALA MA KOTA"       
+	
+}
+#"[addNewCardView] Dodano nową kartę"
+
+{	
+	"id" : 1,        
+	"IsQuestion" : true ,
+	"Blank" :1     ,
+	"text": "ALA MA KOTA"       
+	
+}
+#"[addNewCardView] Dodano nową kartę"
+
+{	
+	"id" : 1,        
+	"IsQuestion" : true ,
+	"Blank" :1     ,
+	"texst": "ALA MA KOTA"       
+	
+}
+"[updateUserPointsView][Error] Nie podano 'text'"
