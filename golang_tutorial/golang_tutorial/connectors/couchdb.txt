@@ -1,0 +1,11 @@
+1. Adres Bazy
+http://127.0.0.1:5984/
+
+2. Wyszuanie wszystkich baz przez curl
+curl -X GET http://127.0.0.1:5984/_all_dbs
+
+3. Futon - webowy klient
+http://localhost:5984/_utils/
+
+4. Baza
+go_test
